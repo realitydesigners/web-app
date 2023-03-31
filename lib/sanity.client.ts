@@ -7,6 +7,7 @@ import {
   pagesBySlugQuery,
   projectBySlugQuery,
   settingsQuery,
+  articleBySlugQuery,
 } from 'lib/sanity.queries'
 import { createClient } from 'next-sanity'
 import type {
@@ -14,6 +15,7 @@ import type {
   PagePayload,
   ProjectPayload,
   SettingsPayload,
+  ArticlesPayload,
 } from 'types'
 
 /**
@@ -67,4 +69,14 @@ export async function getSettings({
   token?: string
 }): Promise<SettingsPayload | undefined> {
   return await sanityClient(token)?.fetch(settingsQuery)
+}
+
+export async function getArticleBySlug({
+  slug,
+  token,
+}: {
+  slug: string
+  token?: string
+}): Promise<ArticlesPayload | undefined> {
+  return await sanityClient(token)?.fetch(articleBySlugQuery, { slug })
 }

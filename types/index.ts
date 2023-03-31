@@ -62,3 +62,12 @@ export interface SettingsPayload {
   menuItems?: MenuItem[]
   ogImage?: Image
 }
+
+export interface ArticlesPayload {
+  client?: string
+  title?: string
+  scene?: PortableTextBlock[]
+  description?: PortableTextBlock[]
+  slug?: string
+  tags?: string
+}

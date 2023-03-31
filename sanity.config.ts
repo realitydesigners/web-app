@@ -10,6 +10,7 @@ import { pageStructure, singletonPlugin } from 'plugins/settings'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
+import articles from 'schemas/documents/articles'
 import page from 'schemas/documents/page'
 import project from 'schemas/documents/project'
 import duration from 'schemas/objects/duration'
@@ -43,6 +44,7 @@ export default defineConfig({
       duration,
       page,
       project,
+      articles,
       // Objects
       milestone,
       timeline,

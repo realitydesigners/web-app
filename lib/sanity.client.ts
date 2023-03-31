@@ -2,20 +2,20 @@ import 'server-only'
 
 import { apiVersion, dataset, projectId, useCdn } from 'lib/sanity.api'
 import {
+  articleBySlugQuery,
   homePageQuery,
   homePageTitleQuery,
   pagesBySlugQuery,
   projectBySlugQuery,
   settingsQuery,
-  articleBySlugQuery,
 } from 'lib/sanity.queries'
 import { createClient } from 'next-sanity'
 import type {
+  ArticlesPayload,
   HomePagePayload,
   PagePayload,
   ProjectPayload,
   SettingsPayload,
-  ArticlesPayload,
 } from 'types'
 
 /**

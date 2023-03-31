@@ -10,7 +10,7 @@ export function HomePage({ data }: { data: HomePagePayload }) {
   const { overview, showcaseProjects, title } = data
 
   return (
-    <div className="space-y-20">
+    <div className="h-screen w-screen space-y-20 bg-black">
       {/* Header */}
       {title && <Header centered title={title} description={overview} />}
       {/* Showcase projects */}

@@ -13,9 +13,9 @@ export function ArticlesPreview({
   token: null | string
   slug: string
 }) {
-  const project: ArticlesPayload = usePreview(token, articleBySlugQuery, {
+  const articles: ArticlesPayload = usePreview(token, articleBySlugQuery, {
     slug: slug,
   })
 
-  return <ArticlesPage data={project} />
+  return <ArticlesPage data={articles} />
 }

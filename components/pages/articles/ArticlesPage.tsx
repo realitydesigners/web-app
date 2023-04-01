@@ -11,16 +11,15 @@ export function ArticlesPage({ data }: { data: ArticlesPayload }) {
   const { client, title, scene, description, slug, tags } = data || {}
 
   return (
-    <div className="h-screen w-screen bg-black">
-      <div className="">
-        {/* Description */}
-        {<body></body> && (
+    <div className="min-h-screen w-screen bg-black">
+      <div className="p-20">
+        <div className="font-mono text-8xl uppercase text-white">{title}</div>
+        {
           <CustomPortableText
             paragraphClasses="font-mono text-white text-xl "
             value={description}
           />
-        )}
-        {/* Workaround: scroll to top on route change */}
+        }
       </div>
     </div>
   )

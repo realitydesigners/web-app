@@ -2,7 +2,7 @@
 
 import { usePreview } from 'lib/sanity.preview'
 import { pagesBySlugQuery } from 'lib/sanity.queries'
-import type { PagePayload } from 'types'
+import type { PagePayload } from 'schemas'
 
 import { Page } from './Page'
 

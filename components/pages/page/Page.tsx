@@ -1,7 +1,7 @@
 import { CustomPortableText } from 'components/global/CustomPortableText'
 import { Header } from 'components/global/Header'
 import ScrollUp from 'components/global/ScrollUp'
-import type { PagePayload } from 'types'
+import type { PagePayload } from 'schemas'
 
 export function Page({ data }: { data: PagePayload }) {
   // Default to an empty object to allow previews on non-existent documents

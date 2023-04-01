@@ -2,7 +2,7 @@
 
 import { usePreview } from 'lib/sanity.preview'
 import { articleBySlugQuery } from 'lib/sanity.queries'
-import type { ArticlesPayload } from 'types'
+import type { ArticlesPayload } from 'schemas/index'
 
 import { ArticlesPage } from '../articles/ArticlesPage'
 

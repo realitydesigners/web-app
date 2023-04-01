@@ -5,7 +5,7 @@ import Tags from 'components/global/Tags'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'
-import { ArticlesPayload } from 'types'
+import { ArticlesPayload } from 'schemas/index'
 
 export function ArticlesPage({ data }: { data: ArticlesPayload }) {
   // Default to an empty object to allow previews on non-existent documents

@@ -1,6 +1,6 @@
 import { CustomPortableText } from 'components/global/CustomPortableText'
 import ImageBox from 'components/global/ImageBox'
-import type { ShowcaseProject } from 'types'
+import type { ShowcaseProject } from 'schemas'
 
 interface ProjectProps {
   project: ShowcaseProject

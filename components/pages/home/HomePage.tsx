@@ -3,7 +3,7 @@ import { Header } from 'components/global/Header'
 import ScrollUp from 'components/global/ScrollUp'
 import { resolveHref } from 'lib/sanity.links'
 import Link from 'next/link'
-import type { HomePagePayload } from 'types'
+import type { HomePagePayload } from 'schemas'
 
 export function HomePage({ data }: { data: HomePagePayload }) {
   // Default to an empty object to allow previews on non-existent documents

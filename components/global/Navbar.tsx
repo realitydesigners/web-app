@@ -1,6 +1,6 @@
 import { resolveHref } from 'lib/sanity.links'
 import Link from 'next/link'
-import { MenuItem } from 'types'
+import { MenuItem } from 'schemas/index'
 
 interface NavbarProps {
   menuItems?: MenuItem[]

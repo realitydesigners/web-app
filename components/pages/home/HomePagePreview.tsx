@@ -2,7 +2,7 @@
 
 import { usePreview } from 'lib/sanity.preview'
 import { homePageQuery } from 'lib/sanity.queries'
-import type { HomePagePayload } from 'types'
+import type { HomePagePayload } from 'schemas'
 
 import { HomePage } from './HomePage'
 

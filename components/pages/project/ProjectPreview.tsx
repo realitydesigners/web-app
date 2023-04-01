@@ -2,7 +2,7 @@
 
 import { usePreview } from 'lib/sanity.preview'
 import { projectBySlugQuery } from 'lib/sanity.queries'
-import type { ProjectPayload } from 'types'
+import type { ProjectPayload } from 'schemas'
 
 import { ProjectPage } from './ProjectPage'
 

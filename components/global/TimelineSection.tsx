@@ -1,5 +1,5 @@
 import { TimelineItem } from 'components/global/TimelineItem'
-import type { MilestoneItem } from 'types'
+import type { MilestoneItem } from 'schemas/index'
 
 interface TimelineItem {
   title: string

@@ -1,5 +1,5 @@
 import ImageBox from 'components/global/ImageBox'
-import type { MilestoneItem } from 'types'
+import type { MilestoneItem } from 'schemas/index'
 
 export function TimelineItem({
   isLast,

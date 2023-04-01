@@ -3,7 +3,7 @@ import { Header } from 'components/global/Header'
 import ImageBox from 'components/global/ImageBox'
 import ScrollUp from 'components/global/ScrollUp'
 import Link from 'next/link'
-import type { ProjectPayload } from 'types'
+import type { ProjectPayload } from 'schemas'
 
 export function ProjectPage({ data }: { data: ProjectPayload }) {
   // Default to an empty object to allow previews on non-existent documents

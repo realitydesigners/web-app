@@ -23,6 +23,12 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      type: 'string',
+      name: 'excerpt',
+      title: 'Excerpt',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: 'overview',
       description:
         'Used both for the <meta> description tag for SEO, and the personal website subheader.',

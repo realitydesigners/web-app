@@ -8,13 +8,16 @@ import { ArticlesPayload } from 'types'
 
 export function ArticlesPage({ data }: { data: ArticlesPayload }) {
   // Default to an empty object to allow previews on non-existent documents
-  const { client, title, scene, description, slug, tags } = data || {}
+  const { client, title, scene, description, slug, tags, excerpt } = data || {}
 
   return (
     <div className="min-h-screen w-screen bg-black">
       <div className=" p-4 lg:p-20">
         <div className="mb-4 font-mono text-5xl font-bold uppercase text-white lg:text-8xl">
           {title}
+        </div>
+        <div className="mb-6 font-mono text-lg text-gray-600 lg:text-xl">
+          {excerpt}
         </div>
         {
           <CustomPortableText

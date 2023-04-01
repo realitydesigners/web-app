@@ -65,6 +65,7 @@ export interface SettingsPayload {
 
 export interface ArticlesPayload {
   client?: string
+  excerpt?: string
   title?: string
   scene?: PortableTextBlock[]
   description?: PortableTextBlock[]

@@ -1,6 +1,6 @@
 import { PortableText, PortableTextComponents } from '@portabletext/react'
-import ImageBox from 'components/shared/ImageBox'
-import { TimelineSection } from 'components/shared/TimelineSection'
+import ImageBox from 'components/global/ImageBox'
+import { TimelineSection } from 'components/global/TimelineSection'
 import { Image, PortableTextBlock } from 'sanity'
 
 export function CustomPortableText({

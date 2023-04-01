@@ -1,7 +1,7 @@
-import { CustomPortableText } from 'components/shared/CustomPortableText'
-import { Header } from 'components/shared/Header'
-import ImageBox from 'components/shared/ImageBox'
-import ScrollUp from 'components/shared/ScrollUp'
+import { CustomPortableText } from 'components/global/CustomPortableText'
+import { Header } from 'components/global/Header'
+import ImageBox from 'components/global/ImageBox'
+import ScrollUp from 'components/global/ScrollUp'
 import Link from 'next/link'
 import type { ProjectPayload } from 'types'
 

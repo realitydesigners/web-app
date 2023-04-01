@@ -10,12 +10,12 @@ import Head from 'next/head'
 import { notFound } from 'next/navigation'
 
 const Stars = dynamic<{}>(
-  () => import('../components/Stars').then((mod) => mod.default),
+  () => import('../components/global/Stars').then((mod) => mod.default),
   { ssr: false }
 )
 
 const Logo = dynamic<{}>(
-  () => import('../components/Logo').then((mod) => mod.default),
+  () => import('../components/global/Logo').then((mod) => mod.default),
   { ssr: false }
 )
 

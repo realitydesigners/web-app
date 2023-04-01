@@ -1,4 +1,4 @@
-import { CustomPortableText } from 'components/shared/CustomPortableText'
+import { CustomPortableText } from 'components/global/CustomPortableText'
 
 interface HeaderProps {
   centered?: boolean

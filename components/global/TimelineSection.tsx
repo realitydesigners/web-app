@@ -1,4 +1,4 @@
-import { TimelineItem } from 'components/shared/TimelineItem'
+import { TimelineItem } from 'components/global/TimelineItem'
 import type { MilestoneItem } from 'types'
 
 interface TimelineItem {

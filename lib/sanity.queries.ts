@@ -72,3 +72,12 @@ export const articleBySlugQuery = groq`
     title,
   }
 `
+
+export const authorBySlugQuery = groq`
+  *[_type == "article" && slug.current == $slug][0] {
+    _id,
+    name,
+    "slug": slug.current,
+    picture,
+  }
+`

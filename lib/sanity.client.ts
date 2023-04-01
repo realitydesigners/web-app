@@ -3,6 +3,7 @@ import 'server-only'
 import { apiVersion, dataset, projectId, useCdn } from 'lib/sanity.api'
 import {
   articleBySlugQuery,
+  authorBySlugQuery,
   homePageQuery,
   homePageTitleQuery,
   pagesBySlugQuery,
@@ -79,4 +80,14 @@ export async function getArticleBySlug({
   token?: string
 }): Promise<ArticlesPayload | undefined> {
   return await sanityClient(token)?.fetch(articleBySlugQuery, { slug })
+}
+
+export async function getAuthorBySlug({
+  slug,
+  token,
+}: {
+  slug: string
+  token?: string
+}): Promise<ArticlesPayload | undefined> {
+  return await sanityClient(token)?.fetch(authorBySlugQuery, { slug })
 }

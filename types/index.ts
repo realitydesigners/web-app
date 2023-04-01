@@ -72,3 +72,10 @@ export interface ArticlesPayload {
   slug?: string
   tags?: string
 }
+
+export interface AuthorPayload {
+  name?: string
+  picture?: Image
+  slug?: string
+  tags?: string
+}

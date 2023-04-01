@@ -1,11 +1,13 @@
-import { DocumentIcon, ImageIcon } from '@sanity/icons'
+import { BookIcon, ImageIcon } from '@sanity/icons'
 import { defineArrayMember, defineField, defineType } from 'sanity'
+
+import authorType from './author'
 
 export default defineType({
   type: 'document',
   name: 'article',
   title: 'Article',
-  icon: DocumentIcon,
+  icon: BookIcon,
   fields: [
     defineField({
       type: 'string',
@@ -23,40 +25,18 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'author',
+      title: 'Author',
+      type: 'reference',
+      to: [{ type: authorType.name }],
+    }),
+    defineField({
       type: 'string',
       name: 'excerpt',
       title: 'Excerpt',
       validation: (rule) => rule.required(),
     }),
-    defineField({
-      name: 'overview',
-      description:
-        'Used both for the <meta> description tag for SEO, and the personal website subheader.',
-      title: 'Overview',
-      type: 'array',
-      of: [
-        // Paragraphs
-        defineArrayMember({
-          lists: [],
-          marks: {
-            annotations: [],
-            decorators: [
-              {
-                title: 'Italic',
-                value: 'em',
-              },
-              {
-                title: 'Strong',
-                value: 'strong',
-              },
-            ],
-          },
-          styles: [],
-          type: 'block',
-        }),
-      ],
-      validation: (rule) => rule.max(155).required(),
-    }),
+
     defineField({
       name: 'tags',
       title: 'Tags',

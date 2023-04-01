@@ -1,6 +1,7 @@
 import { CustomPortableText } from 'components/global/CustomPortableText'
 import { Header } from 'components/global/Header'
 import ImageBox from 'components/global/ImageBox'
+import Tags from 'components/global/Tags'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -31,23 +32,4 @@ export function ArticlesPage({ data }: { data: ArticlesPayload }) {
       </div>
     </div>
   )
-}
-
-function Tags({ tags }: { tags: string[] | string }) {
-  if (Array.isArray(tags)) {
-    return (
-      <div className="mb-4 flex flex-row">
-        {tags.map((tag, key) => (
-          <div
-            key={key}
-            className="lg:text-md mr-2 mt-2 break-words rounded-full bg-white pt-1 pb-1 pl-3 pr-3 font-mono text-sm font-normal uppercase text-black"
-          >
-            {tag}
-          </div>
-        ))}
-      </div>
-    )
-  } else {
-    return <div>{tags}</div>
-  }
 }

@@ -10,15 +10,12 @@ import { pageStructure, singletonPlugin } from 'plugins/settings'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
-import articles from 'schemas/documents/articles'
-import page from 'schemas/documents/page'
-import project from 'schemas/documents/project'
-import duration from 'schemas/objects/duration'
-import milestone from 'schemas/objects/milestone'
-import timeline from 'schemas/objects/timeline'
-import home from 'schemas/singletons/home'
-import settings from 'schemas/singletons/settings'
-import author from 'schemas/documents/author'
+import articles from 'schemas/articles'
+import author from 'schemas/author'
+import home from 'schemas/home'
+import page from 'schemas/page'
+import project from 'schemas/project'
+import settings from 'schemas/settings'
 
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||
@@ -36,21 +33,7 @@ export default defineConfig({
   dataset: dataset || '',
   title,
   schema: {
-    // If you want more content types, you can add them to this array
-    types: [
-      // Singletons
-      home,
-      settings,
-      // Documents
-      duration,
-      page,
-      project,
-      articles,
-      author,
-      // Objects
-      milestone,
-      timeline,
-    ],
+    types: [home, settings, page, project, articles, author],
   },
   plugins: [
     deskTool({

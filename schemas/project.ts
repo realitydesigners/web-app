@@ -67,11 +67,7 @@ export default defineType({
       },
       validation: (rule) => rule.required(),
     }),
-    defineField({
-      name: 'duration',
-      title: 'Duration',
-      type: 'duration',
-    }),
+
     defineField({
       name: 'client',
       title: 'Client',
@@ -117,10 +113,7 @@ export default defineType({
           styles: [],
         }),
         // Custom blocks
-        defineArrayMember({
-          name: 'timeline',
-          type: 'timeline',
-        }),
+
         defineField({
           type: 'image',
           icon: ImageIcon,

@@ -17,24 +17,34 @@ export function CustomPortableText({
       },
       h1: ({ children }) => {
         return (
-          <h1 className="my-4 text-6xl font-bold text-white lg:text-8xl">
+          <h1 className="my-4 font-mono text-6xl font-bold uppercase text-white lg:text-8xl">
             {children}
           </h1>
         )
       },
       h2: ({ children }) => {
         return (
-          <h2 className="my-4  text-4xl font-bold text-white lg:text-6xl">
+          <h2 className="my-4 font-mono text-4xl font-bold uppercase text-white lg:text-6xl">
             {children}
           </h2>
         )
       },
       h3: ({ children }) => {
         return (
-          <h3 className="my-4  text-2xl font-bold text-white lg:text-3xl">
+          <h3 className="my-4 font-mono text-2xl font-bold uppercase text-white lg:text-3xl">
             {children}
           </h3>
         )
+      },
+      ol: ({ children }) => {
+        return (
+          <ol className="list-inside list-decimal text-4xl text-white">
+            {children}
+          </ol>
+        )
+      },
+      li: ({ children }) => {
+        return <li className="my-2 text-white">{children}</li>
       },
     },
     marks: {

@@ -1,6 +1,6 @@
 import 'tailwindcss/tailwind.css'
 
-import { IBM_Plex_Mono, Inter, PT_Serif } from '@next/font/google'
+import { DM_Mono, IBM_Plex_Mono, Inter, PT_Serif } from '@next/font/google'
 
 const serif = PT_Serif({
   variable: '--font-serif',
@@ -18,6 +18,12 @@ const mono = IBM_Plex_Mono({
   variable: '--font-mono',
   subsets: ['latin'],
   weight: ['500', '700'],
+})
+
+const dm = DM_Mono({
+  variable: '--font-dm',
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
 })
 
 export default async function RootLayout({

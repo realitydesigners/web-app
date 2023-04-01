@@ -20,20 +20,7 @@ export function ArticlesPage({ data }: { data: ArticlesPayload }) {
           <p className="text-md  mb-4 w-full font-mono text-gray-600 lg:w-2/3 lg:text-xl">
             {excerpt}
           </p>
-
-          <div className="mb-6">
-            <div className="flex flex-row flex-wrap ">
-              {Array.isArray(tags) &&
-                tags.map((tag, key) => (
-                  <div
-                    key={key}
-                    className="lg:text-md mr-2 mt-2 break-words rounded-full bg-white pt-1 pb-1 pl-3 pr-3 font-mono text-sm font-normal uppercase text-black"
-                  >
-                    {tag}
-                  </div>
-                ))}
-            </div>
-          </div>
+          <Tags tags={tags} />
         </div>
         {
           <CustomPortableText
@@ -44,4 +31,23 @@ export function ArticlesPage({ data }: { data: ArticlesPayload }) {
       </div>
     </div>
   )
+}
+
+function Tags({ tags }: { tags: string[] | string }) {
+  if (Array.isArray(tags)) {
+    return (
+      <div className="mb-4 flex flex-row">
+        {tags.map((tag, key) => (
+          <div
+            key={key}
+            className="lg:text-md mr-2 mt-2 break-words rounded-full bg-white pt-1 pb-1 pl-3 pr-3 font-mono text-sm font-normal uppercase text-black"
+          >
+            {tag}
+          </div>
+        ))}
+      </div>
+    )
+  } else {
+    return <div>{tags}</div>
+  }
 }

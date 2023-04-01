@@ -15,6 +15,27 @@ export function CustomPortableText({
       normal: ({ children }) => {
         return <p className={paragraphClasses}>{children}</p>
       },
+      h1: ({ children }) => {
+        return (
+          <h1 className="my-4 text-6xl font-bold text-white lg:text-8xl">
+            {children}
+          </h1>
+        )
+      },
+      h2: ({ children }) => {
+        return (
+          <h2 className="my-4  text-4xl font-bold text-white lg:text-6xl">
+            {children}
+          </h2>
+        )
+      },
+      h3: ({ children }) => {
+        return (
+          <h3 className="my-4  text-2xl font-bold text-white lg:text-3xl">
+            {children}
+          </h3>
+        )
+      },
     },
     marks: {
       link: ({ children, value }) => {
@@ -36,7 +57,7 @@ export function CustomPortableText({
         value: Image & { alt?: string; caption?: string }
       }) => {
         return (
-          <div className="my-6 space-y-2">
+          <div className="my-4">
             <ImageBox
               image={value}
               alt={value.alt}

@@ -18,7 +18,7 @@ export function ArticlesPage({ data }: { data: ArticlesPayload }) {
         </div>
         {
           <CustomPortableText
-            paragraphClasses="font-mono text-white text-xl "
+            paragraphClasses="font-mono text-white text-2xl "
             value={description}
           />
         }

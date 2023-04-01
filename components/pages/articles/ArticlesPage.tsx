@@ -12,8 +12,10 @@ export function ArticlesPage({ data }: { data: ArticlesPayload }) {
 
   return (
     <div className="min-h-screen w-screen bg-black">
-      <div className="p-20">
-        <div className="font-mono text-8xl uppercase text-white">{title}</div>
+      <div className=" p-4 lg:p-20">
+        <div className="font-mono text-4xl uppercase text-white lg:text-8xl">
+          {title}
+        </div>
         {
           <CustomPortableText
             paragraphClasses="font-mono text-white text-xl "

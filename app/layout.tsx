@@ -1,6 +1,12 @@
 import 'tailwindcss/tailwind.css'
 
-import { DM_Mono, IBM_Plex_Mono, Inter, PT_Serif } from '@next/font/google'
+import {
+  DM_Mono,
+  Do_Hyeon,
+  IBM_Plex_Mono,
+  Inter,
+  PT_Serif,
+} from '@next/font/google'
 
 const serif = PT_Serif({
   variable: '--font-serif',
@@ -26,6 +32,12 @@ const dm = DM_Mono({
   weight: ['300', '400', '500'],
 })
 
+const hyeon = Do_Hyeon({
+  variable: '--font-hyeon',
+  subsets: ['latin'],
+  weight: ['400'],
+})
+
 export default async function RootLayout({
   children,
 }: {
@@ -34,7 +46,7 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={`${mono.variable} ${sans.variable} ${serif.variable}`}
+      className={`${mono.variable} ${sans.variable} ${serif.variable}  ${hyeon.variable}`}
     >
       <body>{children}</body>
     </html>

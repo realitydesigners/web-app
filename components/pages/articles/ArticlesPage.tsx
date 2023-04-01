@@ -14,10 +14,10 @@ export function ArticlesPage({ data }: { data: ArticlesPayload }) {
     <div className="min-h-screen w-screen bg-black">
       <div className=" p-4 lg:p-32">
         <div className="flex flex-col" id="ArticleHeading">
-          <h1 className="font-dm mb-4 text-5xl font-bold uppercase text-white lg:text-8xl">
+          <h1 className="mb-4 font-mono text-5xl font-bold uppercase text-white lg:text-8xl">
             {title}
           </h1>
-          <p className="text-md mb-6 w-full font-mono text-gray-600 lg:w-2/3 lg:text-xl">
+          <p className="text-md  mb-6 w-full font-mono text-gray-600 lg:w-2/3 lg:text-xl">
             {excerpt}
           </p>
         </div>

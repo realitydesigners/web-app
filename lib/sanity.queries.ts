@@ -81,3 +81,14 @@ export const authorBySlugQuery = groq`
     picture,
   }
 `
+
+export const articleQuery = groq`
+*[_type == "article"]{
+  _id,
+  name,
+  title,
+  "slug": slug.current,
+  "image": image.asset->url,
+  "alt": image.alt,
+  description,
+}`

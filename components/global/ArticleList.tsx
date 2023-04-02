@@ -48,10 +48,7 @@ export function ArticleList({ query }: ArticleListProps) {
               <div>
                 {article.author && article.author.picture && (
                   <>
-                    <Link
-                      className="font-mono text-xs uppercase text-white "
-                      href={`/authors/${article.author.slug}`}
-                    >
+                    <Link href={`/authors/${article.author.slug.current}`}>
                       {article.author.name}
                     </Link>
                   </>

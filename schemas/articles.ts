@@ -25,13 +25,29 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      type: 'image',
+      name: 'image',
+      title: 'Image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alt Text',
+          type: 'string',
+        },
+      ],
+    }),
+
+    defineField({
       name: 'author',
       title: 'Author',
       type: 'reference',
       to: [{ type: authorType.name }],
     }),
     defineField({
-      type: 'string',
+      type: 'text',
       name: 'excerpt',
       title: 'Excerpt',
       validation: (rule) => rule.required(),

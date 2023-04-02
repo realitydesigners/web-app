@@ -38,10 +38,7 @@ export default function IndexRoute() {
           </div>
         </div>
         <div className="flex h-screen w-screen items-center justify-center ">
-          <div className="relative z-10 flex h-4/5 w-4/5 bg-gray-600"></div>
-        </div>
-        <div className="flex h-screen w-screen items-center justify-center ">
-          <div className="relative z-10 flex h-4/5 w-4/5 bg-gray-400"></div>
+          <div className="relative z-10 flex h-4/5 w-11/12 bg-white"></div>
         </div>
       </main>
     </>

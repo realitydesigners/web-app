@@ -1,5 +1,6 @@
 'use client'
 
+import Navbar from 'components/global/Navbar'
 import { HomePagePreview } from 'components/pages/home/HomePagePreview'
 import { PreviewSuspense } from 'components/preview/PreviewSuspense'
 import { PreviewWrapper } from 'components/preview/PreviewWrapper'
@@ -27,6 +28,7 @@ export default function IndexRoute() {
         <meta name="description" content="My website description"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navbar />
       <main className="bg-black">
         <div className="fixed z-0 h-screen w-screen">
           {' '}

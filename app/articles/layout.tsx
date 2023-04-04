@@ -1,5 +1,6 @@
 import 'tailwindcss/tailwind.css'
 
+import Navbar from 'components/global/Navbar'
 import dynamic from 'next/dynamic'
 
 const Stars = dynamic<{}>(
@@ -58,6 +59,7 @@ export default async function RootLayout({
       <body>
         {' '}
         <Stars />
+        <Navbar />
         {children}
       </body>
     </html>

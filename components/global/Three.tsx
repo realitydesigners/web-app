@@ -1,3 +1,5 @@
+'use client'
+
 import { OrbitControls } from '@react-three/drei'
 import { PerspectiveCamera } from '@react-three/drei'
 import useSpline from '@splinetool/r3f-spline'
@@ -17,7 +19,7 @@ export default function Scene({ ...props }) {
           far={100000}
           near={70}
           fov={45}
-          position={[0.0, 0.0, 500.0]}
+          position={[0.0, 0.0, 800.0]}
           rotation={[0, 0, 0]}
         />
         <group name="Hologram">

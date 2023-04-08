@@ -46,7 +46,7 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={`${mono.variable} ${sans.variable} ${serif.variable}  ${hyeon.variable} ${dm.variable}`}
+      className={`${mono.variable} ${sans.variable} ${serif.variable}  ${hyeon.variable}`}
     >
       <body className="bg-black">{children}</body>
     </html>

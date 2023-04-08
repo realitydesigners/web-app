@@ -16,6 +16,7 @@ import home from 'schemas/home'
 import page from 'schemas/page'
 import project from 'schemas/project'
 import settings from 'schemas/settings'
+import category from 'schemas/category'
 
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Reality Designers | Studio'
@@ -33,7 +34,7 @@ export default defineConfig({
   dataset: dataset || '',
   title,
   schema: {
-    types: [home, settings, page, project, articles, author],
+    types: [home, settings, page, project, articles, author, category],
   },
   plugins: [
     deskTool({

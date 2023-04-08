@@ -87,6 +87,8 @@ export const articleQuery = groq`
   _id,
   name,
   title,
+  author,
+  category,
   "slug": slug.current,
   "image": image.asset->url,
   "alt": image.alt,

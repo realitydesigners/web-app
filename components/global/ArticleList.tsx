@@ -44,15 +44,28 @@ export function ArticleList({ query }: ArticleListProps) {
                   src={article.image}
                   alt={article.alt}
                   width={200}
-                  height={200}
-                  className="h-40 w-40 transform rounded-lg object-cover transition-all group-hover:scale-105 group-hover:shadow-lg"
+                  height={100}
+                  className="h-40 w-32 transform rounded-lg object-cover transition-all group-hover:scale-105 group-hover:shadow-lg"
                 />
-                <div className="flex w-full flex-col bg-black p-4">
-                  <h2 className="font-mono text-xl uppercase text-slate-200 transition-colors duration-300 group-hover:text-white group-hover:underline">
+                <div className="flex w-full flex-col bg-black pl-4">
+                  <div>
+                    {article.category && (
+                      <>
+                        <Link
+                          href={`/authors/${article.category.slug.current}`}
+                          className="font-mono text-xs  uppercase tracking-widest text-gray-600"
+                        >
+                          {article.category.name}
+                        </Link>
+                      </>
+                    )}
+                  </div>
+
+                  <h2 className="mb-2 font-mono text-xl font-bold uppercase text-slate-200 transition-colors duration-300 group-hover:text-white group-hover:underline">
                     {article.title}
                   </h2>
                   <p
-                    className="mb-4 w-full overflow-hidden overflow-ellipsis font-mono text-sm text-gray-600 lg:w-2/3 lg:text-xl"
+                    className="mb-4 w-full overflow-hidden overflow-ellipsis font-mono text-xs leading-4  text-gray-600 lg:w-2/3 lg:text-xl"
                     style={{
                       display: '-webkit-box',
                       WebkitBoxOrient: 'vertical',
@@ -61,15 +74,6 @@ export function ArticleList({ query }: ArticleListProps) {
                   >
                     {article.excerpt}
                   </p>
-                  <div>
-                    {article.author && article.author.picture && (
-                      <>
-                        <Link href={`/authors/${article.author.slug.current}`}>
-                          {article.author.name}
-                        </Link>
-                      </>
-                    )}
-                  </div>
                 </div>
               </div>
             </Link>

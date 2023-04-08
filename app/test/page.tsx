@@ -13,8 +13,10 @@ const query = `*[_type=="article"]
   "alt": image.alt,
   description,
   author,
+  category,
 }
 {...,author->{...}}
+{...,category->{...}}
 `
 
 export default function Test() {

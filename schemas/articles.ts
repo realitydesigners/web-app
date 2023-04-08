@@ -2,6 +2,7 @@ import { BookIcon, ImageIcon } from '@sanity/icons'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
 import authorType from './author'
+import categoryType from './category'
 
 export default defineType({
   type: 'document',
@@ -45,6 +46,12 @@ export default defineType({
       title: 'Author',
       type: 'reference',
       to: [{ type: authorType.name }],
+    }),
+    defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'reference',
+      to: [{ type: categoryType.name }],
     }),
     defineField({
       type: 'text',

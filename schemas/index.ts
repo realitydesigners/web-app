@@ -67,6 +67,8 @@ export interface ArticlesPayload {
   client?: string
   excerpt?: string
   title?: string
+  category?: string
+  author?: string
   scene?: PortableTextBlock[]
   description?: PortableTextBlock[]
   slug?: string

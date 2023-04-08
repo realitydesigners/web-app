@@ -30,6 +30,14 @@ const Navbar: React.FC = () => {
             width={50}
             height={50}
           />
+          <div className=" pl-2">
+            <h1 className="font-dm  text-xl font-semibold uppercase leading-none text-white">
+              Reality
+            </h1>
+            <h1 className="font-dm text-md font-semibold uppercase leading-none text-white">
+              Designers
+            </h1>
+          </div>
         </div>
 
         {/* Desktop menu */}

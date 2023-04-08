@@ -1,11 +1,9 @@
 'use client'
 
-import { CustomPortableText } from 'components/global/CustomPortableText'
 import Image from 'next/image'
 import Link from 'next/link'
 import { createClient, groq } from 'next-sanity'
 import React from 'react'
-import author from 'schemas/author'
 
 const clientConfig = {
   projectId: 'fovvfda4',

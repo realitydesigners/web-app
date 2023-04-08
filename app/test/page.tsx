@@ -1,4 +1,6 @@
 import { ArticleList } from 'components/global/ArticleList'
+import Navbar from 'components/global/Navbar'
+import Head from 'next/head'
 
 const query = `*[_type=="article"]
 [0..4]
@@ -21,10 +23,18 @@ const query = `*[_type=="article"]
 
 export default function Test() {
   return (
-    <div className="h-full w-full">
-      <div className="w-full ">
-        <ArticleList query={query} />
+    <>
+      <Head>
+        <title>REALITY DESIGNERS | Building Worlds Inside Minds</title>
+        <meta name="description" content="My website description"></meta>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Navbar />
+      <div className="h-full w-full">
+        <div className=" w-full">
+          <ArticleList query={query} />
+        </div>
       </div>
-    </div>
+    </>
   )
 }

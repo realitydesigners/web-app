@@ -34,7 +34,7 @@ export function ArticleList({ query }: ArticleListProps) {
   }, [query])
 
   return (
-    <div className="h-full w-full">
+    <div className="w-ful h-full pt-20">
       {articles.map((article: any) => {
         return (
           <div key={article._id}>

@@ -22,14 +22,8 @@ const Navbar: React.FC = () => {
     <header className="fixed z-50 flex h-20 w-screen items-center bg-black py-4">
       <div className="container mx-auto flex items-center justify-between px-4">
         {/* Logo */}
-        <div className="flex items-center">
-          <Image
-            className="z-20"
-            src={logo}
-            alt="Logo"
-            width={50}
-            height={50}
-          />
+        <div className="z-20 flex items-center">
+          <Image src={logo} alt="Logo" width={50} height={50} />
           <div className=" pl-2">
             <h1 className="font-dm  text-xl font-semibold uppercase leading-none text-white">
               Reality

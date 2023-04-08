@@ -1,5 +1,3 @@
-'use client'
-
 import { OrbitControls } from '@react-three/drei'
 import { PerspectiveCamera } from '@react-three/drei'
 import useSpline from '@splinetool/r3f-spline'
@@ -10,7 +8,6 @@ export default function Scene({ ...props }) {
   )
   return (
     <>
-      <color attach="background" args={['#000000']} />
       <group {...props} dispose={null}>
         <OrbitControls />
         <PerspectiveCamera

@@ -7,6 +7,7 @@ const query = `*[_type=="article"]
   name,
   title,
   excerpt,
+  slug,
   "slug": slug.current,
   "image": image.asset->url,
   "alt": image.alt,

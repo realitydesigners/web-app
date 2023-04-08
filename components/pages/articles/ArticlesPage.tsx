@@ -13,7 +13,7 @@ export function ArticlesPage({ data }: { data: ArticlesPayload }) {
 
   return (
     <div className=" relative z-10 min-h-screen w-screen">
-      <div className=" p-5 lg:p-32">
+      <div className=" p-5 pt-40 lg:p-32">
         <div className="flex flex-col" id="ArticleHeading">
           <h1 className="mb-4 font-mono text-5xl font-bold uppercase text-white lg:text-8xl">
             {title}

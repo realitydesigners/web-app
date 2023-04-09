@@ -10,6 +10,11 @@ const NavBarScene = dynamic<{}>(
   { ssr: false }
 )
 
+const Stars = dynamic<{}>(
+  () => import('components/global/Stars').then((mod) => mod.default),
+  { ssr: false }
+)
+
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -76,7 +81,7 @@ const Navbar: React.FC = () => {
 
         {/* Full screen menu */}
         {isMenuOpen && (
-          <div className="fixed inset-0 z-10 bg-black  md:hidden">
+          <div className="b fixed inset-0 z-10  md:hidden">
             <header className=" fixed z-50 flex h-20 w-screen items-center justify-end px-4 py-4 ">
               <button
                 onClick={toggleMenu}
@@ -85,13 +90,10 @@ const Navbar: React.FC = () => {
                 X
               </button>
             </header>
-
-            <nav className="flex h-full flex-col items-center justify-center space-y-4">
-              <div className="absolute h-full w-full">
+            <nav className="relative  flex h-full flex-col items-center justify-center space-y-4">
+              <div className=" absolute h-screen w-screen">
                 <NavBarScene />
               </div>
-
-              {/* Close button */}
             </nav>
           </div>
         )}

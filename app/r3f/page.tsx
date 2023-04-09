@@ -30,7 +30,7 @@ export default function IndexRoute() {
       <Head>
         <title>REALITY DESIGNERS | Building Worlds Inside Minds</title>
         <meta name="description" content="My website description"></meta>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Navbar />
       <main className="bg-black">

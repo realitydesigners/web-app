@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import logo from 'public/favicon/logo.svg'
 import React, { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -19,20 +20,29 @@ const Navbar: React.FC = () => {
   }, [isMenuOpen])
 
   return (
-    <header className="fixed z-50 flex h-20 w-screen items-center bg-black py-4">
+    <header className="fixed z-50 flex h-20 w-screen items-center  py-4">
       <div className="container mx-auto flex items-center justify-between px-4">
         {/* Logo */}
-        <div className="z-20 flex items-center">
-          <Image src={logo} alt="Logo" width={50} height={50} />
-          <div className=" pl-2">
-            <h1 className="font-dm  text-xl font-semibold uppercase leading-none text-white">
-              Reality
-            </h1>
-            <h1 className="font-dm text-md font-semibold uppercase leading-none text-white">
-              Designers
-            </h1>
+        <Link href="/" className="z-20">
+          <div className=" flex items-center">
+            <div
+              style={{
+                animation: 'rotate 24s linear infinite',
+                animationName: 'rotate',
+              }}
+            >
+              <Image src={logo} alt="Logo" width={50} height={50} />
+            </div>
+            <div className="pl-2">
+              <h1 className="font-dm text-xl font-semibold uppercase leading-none text-white">
+                Reality
+              </h1>
+              <h1 className="font-dm text-md font-semibold uppercase leading-none text-white">
+                Designers
+              </h1>
+            </div>
           </div>
-        </div>
+        </Link>
 
         {/* Desktop menu */}
         <nav className="hidden space-x-8 md:flex">

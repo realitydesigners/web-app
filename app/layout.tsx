@@ -7,6 +7,7 @@ import {
   Inter,
   PT_Serif,
 } from '@next/font/google'
+import Navbar from 'components/global/Navbar'
 
 const serif = PT_Serif({
   variable: '--font-serif',
@@ -48,7 +49,10 @@ export default async function RootLayout({
       lang="en"
       className={`${mono.variable} ${sans.variable} ${serif.variable}  ${hyeon.variable} ${dm.variable}`}
     >
-      <body className="bg-black">{children}</body>
+      <body className="bg-black">
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }

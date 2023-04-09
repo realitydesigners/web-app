@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
         {/* Full screen menu */}
         {isMenuOpen && (
           <div className="fixed inset-0 z-10 bg-black  md:hidden">
-            <header className=" z-50 flex  h-20 w-screen items-center justify-end px-4 py-4 ">
+            <header className=" fixed z-50 flex h-20 w-screen items-center justify-end px-4 py-4 ">
               <button
                 onClick={toggleMenu}
                 className=" z-20 rounded bg-white py-2 px-4  font-semibold text-black"

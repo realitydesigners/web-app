@@ -45,7 +45,7 @@ export function ArticleList({ query }: ArticleListProps) {
                   height={100}
                   className="h-32 w-24 transform rounded-lg object-cover transition-all group-hover:scale-105 group-hover:shadow-lg"
                 />
-                <div className="flex w-full flex-col bg-black pl-4">
+                <div className="flex w-full flex-col pl-4">
                   <div>
                     {article.category && (
                       <>

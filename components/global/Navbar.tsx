@@ -1,8 +1,8 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 import logo from 'public/favicon/logo.svg'
 import React, { useEffect, useState } from 'react'
-import Link from 'next/link'
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

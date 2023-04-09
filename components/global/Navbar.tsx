@@ -1,8 +1,14 @@
 'use client'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
 import logo from 'public/favicon/logo.svg'
 import React, { useEffect, useState } from 'react'
+
+const NavBarScene = dynamic<{}>(
+  () => import('components/global/NavBarScene').then((mod) => mod.default),
+  { ssr: false }
+)
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -71,36 +77,21 @@ const Navbar: React.FC = () => {
         {/* Full screen menu */}
         {isMenuOpen && (
           <div className="fixed inset-0 z-10 bg-black  md:hidden">
-            <nav className="flex h-full flex-col items-center justify-center space-y-4">
-              <a
-                className=" font-mono text-6xl font-semibold uppercase text-slate-200"
-                href="/"
-                onClick={toggleMenu}
-              >
-                Home
-              </a>
-              <a
-                className="font-mono text-6xl font-semibold uppercase text-slate-200"
-                href="/about"
-                onClick={toggleMenu}
-              >
-                About
-              </a>
-              <a
-                className="font-mono text-6xl font-semibold uppercase text-slate-200"
-                href="/contact"
-                onClick={toggleMenu}
-              >
-                Contact
-              </a>
-
-              {/* Close button */}
+            <header className=" z-50 flex  h-20 w-screen items-center justify-end px-4 py-4 ">
               <button
                 onClick={toggleMenu}
-                className="rounded bg-white py-4 px-4 text-4xl font-semibold text-black"
+                className=" z-20 rounded bg-white py-2 px-4  font-semibold text-black"
               >
                 X
               </button>
+            </header>
+
+            <nav className="flex h-full flex-col items-center justify-center space-y-4">
+              <div className="absolute h-full w-full">
+                <NavBarScene />
+              </div>
+
+              {/* Close button */}
             </nav>
           </div>
         )}

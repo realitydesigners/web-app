@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
           onClick={toggleMenu}
           className="rounded bg-white py-2 px-4 font-semibold text-black md:hidden"
         >
-          {isMenuOpen ? 'Close Menu' : '>'}
+          {isMenuOpen ? '>' : '>'}
         </button>
 
         {/* Full screen menu */}

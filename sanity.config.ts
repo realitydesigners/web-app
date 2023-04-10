@@ -12,11 +12,11 @@ import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
 import articles from 'schemas/articles'
 import author from 'schemas/author'
+import category from 'schemas/category'
 import home from 'schemas/home'
 import page from 'schemas/page'
 import project from 'schemas/project'
 import settings from 'schemas/settings'
-import category from 'schemas/category'
 
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Reality Designers | Studio'

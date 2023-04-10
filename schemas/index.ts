@@ -64,15 +64,15 @@ export interface SettingsPayload {
 }
 
 export interface ArticlesPayload {
-  client?: string
-  excerpt?: string
   title?: string
+  slug?: string
+  image?: Image
   category?: string
   author?: string
+  excerpt?: string
+  tags?: string[]
   scene?: PortableTextBlock[]
   description?: PortableTextBlock[]
-  slug?: string
-  tags?: string
 }
 
 export interface AuthorPayload {

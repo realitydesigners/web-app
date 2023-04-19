@@ -10,6 +10,7 @@ import { pageStructure, singletonPlugin } from 'plugins/settings'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
+import { muxInput } from 'sanity-plugin-mux-input'
 import articles from 'schemas/articles'
 import author from 'schemas/author'
 import category from 'schemas/category'
@@ -17,6 +18,7 @@ import home from 'schemas/home'
 import page from 'schemas/page'
 import project from 'schemas/project'
 import settings from 'schemas/settings'
+import video from 'schemas/video'
 
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Reality Designers | Studio'
@@ -34,7 +36,7 @@ export default defineConfig({
   dataset: dataset || '',
   title,
   schema: {
-    types: [home, settings, page, project, articles, author, category],
+    types: [home, settings, page, project, articles, author, category, video],
   },
   plugins: [
     deskTool({
@@ -55,5 +57,6 @@ export default defineConfig({
     // Vision lets you query your content with GROQ in the studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
+    muxInput(),
   ],
 })

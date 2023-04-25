@@ -4,7 +4,7 @@ import Navbar from 'components/global/Navbar'
 import dynamic from 'next/dynamic'
 
 const Stars = dynamic<{}>(
-  () => import('../../components/global/Stars').then((mod) => mod.default),
+  () => import('../../../components/global/Stars').then((mod) => mod.default),
   { ssr: false }
 )
 

@@ -3,24 +3,18 @@
 import { PerspectiveCamera } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import Navbar from 'components/global/Navbar'
-import { HomePagePreview } from 'components/pages/home/HomePagePreview'
-import { PreviewSuspense } from 'components/preview/PreviewSuspense'
-import { PreviewWrapper } from 'components/preview/PreviewWrapper'
-import { getHomePage } from 'lib/sanity.client'
-import { getPreviewToken } from 'lib/sanity.server.preview'
+import Three from '../../../components/global/Three'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { notFound } from 'next/navigation'
 
-import Three from '../../components/global/Three'
-
 const Stars = dynamic<{}>(
-  () => import('../../components/global/Stars').then((mod) => mod.default),
+  () => import('../../../components/global/Stars').then((mod) => mod.default),
   { ssr: false }
 )
 
 const Logo = dynamic<{}>(
-  () => import('../../components/global/Logo').then((mod) => mod.default),
+  () => import('../../../components/global/Logo').then((mod) => mod.default),
   { ssr: false }
 )
 

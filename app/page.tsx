@@ -8,6 +8,7 @@ import { getPreviewToken } from 'lib/sanity.server.preview'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { notFound } from 'next/navigation'
+import { Analytics } from '@vercel/analytics/react'
 
 const Stars = dynamic<{}>(
   () => import('../components/global/Stars').then((mod) => mod.default),
@@ -42,6 +43,7 @@ export default function IndexRoute() {
           <div className="relative z-10 flex h-4/5 w-11/12 bg-white"></div>
         </div>
       </main>
+      <Analytics />
     </>
   )
 }

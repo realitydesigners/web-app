@@ -1,0 +1,24 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+p:not(:last-child) {
+  margin-bottom: 0.875rem;
+}
+
+ol,
+ul {
+  margin-left: 1rem;
+}
+
+ol {
+  list-style-type: disc;
+}

@@ -18,6 +18,7 @@ export function ArticlesPage({ data }: { data: ArticlesPayload }) {
           <h1 className="font-dm mb-4  text-5xl font-bold uppercase tracking-wide text-white lg:text-8xl">
             {title}
           </h1>
+
           <p className="text-md  mb-4 w-full font-mono text-gray-400 lg:w-2/3 lg:text-xl">
             {excerpt}
           </p>

@@ -1,4 +1,5 @@
 'use client'
+
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -45,10 +46,10 @@ const Navbar: React.FC = () => {
               <Image src={logo} alt="Logo" width={50} height={50} />
             </div>
             <div className="pl-2">
-              <h1 className="font-dm text-xl font-semibold uppercase leading-none text-white">
+              <h1 className="font-d text-xl font-semibold uppercase leading-none text-white">
                 Reality
               </h1>
-              <h1 className="font-dm text-md font-semibold uppercase leading-none text-white">
+              <h1 className="font-d text-md font-semibold uppercase leading-none text-white">
                 Designers
               </h1>
             </div>

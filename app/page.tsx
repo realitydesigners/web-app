@@ -1,5 +1,6 @@
 'use client'
 
+import { Analytics } from '@vercel/analytics/react'
 import { HomePagePreview } from 'components/pages/home/HomePagePreview'
 import { PreviewSuspense } from 'components/preview/PreviewSuspense'
 import { PreviewWrapper } from 'components/preview/PreviewWrapper'
@@ -8,7 +9,6 @@ import { getPreviewToken } from 'lib/sanity.server.preview'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { notFound } from 'next/navigation'
-import { Analytics } from '@vercel/analytics/react'
 
 const Stars = dynamic<{}>(
   () => import('../components/global/Stars').then((mod) => mod.default),

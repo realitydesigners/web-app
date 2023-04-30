@@ -3,10 +3,11 @@
 import { PerspectiveCamera } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import Navbar from 'components/global/Navbar'
-import Three from '../../../components/global/Three'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { notFound } from 'next/navigation'
+
+import Three from '../../../components/global/Three'
 
 const Stars = dynamic<{}>(
   () => import('../../../components/global/Stars').then((mod) => mod.default),

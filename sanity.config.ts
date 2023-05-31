@@ -17,7 +17,6 @@ import home from 'schemas/home'
 import page from 'schemas/page'
 import project from 'schemas/project'
 import settings from 'schemas/settings'
-import video from 'schemas/video'
 
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Reality Designers | Studio'
@@ -35,7 +34,7 @@ export default defineConfig({
   dataset: dataset || '',
   title,
   schema: {
-    types: [home, settings, page, project, articles, author, category, video],
+    types: [home, settings, page, project, articles, author, category],
   },
   plugins: [
     deskTool({
@@ -56,6 +55,5 @@ export default defineConfig({
     // Vision lets you query your content with GROQ in the studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
-  
   ],
 })

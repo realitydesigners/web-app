@@ -9,7 +9,7 @@ import { ArticlesPayload } from 'schemas/index'
 
 export function ArticlesPage({ data }: { data: ArticlesPayload }) {
   // Default to an empty object to allow previews on non-existent documents
-  const { title, description, slug, tags, excerpt } = data || {}
+  const { title, description = [], slug, tags = [], excerpt } = data || {}
 
   return (
     <div className=" relative z-10 min-h-screen w-screen">

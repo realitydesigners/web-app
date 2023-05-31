@@ -25,14 +25,22 @@ export default async function ArticleSlugRoute({
         <PreviewSuspense
           fallback={
             <PreviewWrapper>
-              <ArticlesPage data={data} />
+              {data ? (
+                <ArticlesPage data={data} />
+              ) : (
+                /* Render something else when data is undefined */
+                <div>Loading...</div>
+              )}
             </PreviewWrapper>
           }
         >
           <ArticlesPreview token={token} slug={params.slug} />
         </PreviewSuspense>
-      ) : (
+      ) : data ? (
         <ArticlesPage data={data} />
+      ) : (
+        /* Render something else when data is undefined */
+        <div>Loading...</div>
       )}
     </>
   )

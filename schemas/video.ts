@@ -1,6 +1,5 @@
 import { PlugIcon } from '@sanity/icons'
 import { defineArrayMember, defineField, defineType } from 'sanity'
-import muxInput from 'sanity-plugin-mux-input'
 
 export default defineType({
   title: 'Video blog post',

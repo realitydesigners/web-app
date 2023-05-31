@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@mux/mux-node": "^7.3.0",
-    "@next/font": "^13.1.2",
+    "@next/font": "^13.3.2",
     "@portabletext/react": "^2.0.0",
     "@react-three/drei": "^9.64.0",
     "@react-three/fiber": "^8.12.0",

@@ -9,12 +9,14 @@ module.exports = {
   ],
   theme: {
     // Overriding fontFamily to use @next/font loaded families
-    fontFamily: {
-      mono: 'var(--font-mono)',
-      sans: 'var(--font-sans)',
-      serif: 'var(--font-serif)',
-      hyeon: 'var(--font-hyeon)',
-    },
+    extend: {
+      fontFamily: {
+        mono: 'var(--font-mono)',
+        sans: 'var(--font-sans)',
+        serif: 'var(--font-serif)',
+        hyeon: 'var(--font-hyeon)',
+      },
+    }
   },
   plugins: [require('@tailwindcss/typography')],
 }

@@ -41,13 +41,14 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'theme',
-      title: 'Theme',
+      name: 'layout',
+      title: 'Layout',
       type: 'string',
       options: {
         list: [
-          { title: 'Light', value: 'light' },
-          { title: 'Dark', value: 'dark' },
+          { title: 'Light Layout', value: 'light' },
+          { title: 'Dark Layout', value: 'dark' },
+          // Add as many layouts as you need
         ],
       },
     }),

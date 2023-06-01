@@ -1,6 +1,5 @@
 import { CustomPortableText } from 'components/global/CustomPortableText'
 import { Header } from 'components/global/Header'
-import ImageBox from 'components/global/ImageBox'
 import Tags from 'components/global/Tags'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'

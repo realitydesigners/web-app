@@ -23,7 +23,7 @@ export function LightLayout({ data }: { data: ArticlesPayload }) {
           <Tags tags={tags} />
         </div>
         <CustomPortableText
-          paragraphClasses="font-mono text-xl lg:text-2xl"
+          paragraphClasses="font-mono text-xl text-black lg:text-2xl"
           value={description}
         />
       </div>

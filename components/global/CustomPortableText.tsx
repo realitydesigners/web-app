@@ -22,7 +22,9 @@ export function CustomPortableText({
       },
       h2: ({ children }) => {
         return (
-          <h2 className="my-4 font-mono text-4xl font-bold uppercase text-white lg:text-6xl">
+          <h2
+            className={`my-4 font-mono text-4xl font-bold uppercase lg:text-6xl ${paragraphClasses}`}
+          >
             {children}
           </h2>
         )

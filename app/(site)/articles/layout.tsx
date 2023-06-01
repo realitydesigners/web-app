@@ -1,4 +1,5 @@
 import 'tailwindcss/tailwind.css'
+import '../../globals.css'
 
 import Navbar from 'components/global/Navbar'
 import dynamic from 'next/dynamic'

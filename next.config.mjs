@@ -5,6 +5,7 @@ const config = {
   swcMinify: false,
   experimental: {
     appDir: true,
+    serverActions: true,
   },
 
   images: {

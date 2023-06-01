@@ -40,6 +40,17 @@ export default defineType({
         },
       ],
     }),
+    defineField({
+      name: 'theme',
+      title: 'Theme',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Light', value: 'light' },
+          { title: 'Dark', value: 'dark' },
+        ],
+      },
+    }),
 
     defineField({
       name: 'author',

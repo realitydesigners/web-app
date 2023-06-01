@@ -67,6 +67,7 @@ export interface ArticlesPayload {
   title?: string
   slug?: string
   image?: Image
+  theme?: string
   category?: string
   author?: string
   excerpt?: string

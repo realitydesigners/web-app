@@ -179,6 +179,21 @@ export default defineType({
               description:
                 'Alternative text for screenreaders. Falls back on caption if not set',
             }),
+            {
+              name: 'className',
+              title: 'CSS Class',
+              type: 'string',
+              options: {
+                list: [
+                  { title: 'img-dark', value: 'img-dark' },
+                  {
+                    title: 'img-light',
+                    value: 'img-light',
+                  },
+                  // Add more class options if needed
+                ],
+              },
+            },
           ],
         }),
       ],

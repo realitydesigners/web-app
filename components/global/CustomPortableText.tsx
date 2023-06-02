@@ -6,7 +6,7 @@ import { PortableTextBlock } from 'sanity'
 
 import { urlFor } from '../../lib/urlFor'
 
-const SampleImageComponent = ({ value, isInline }) => {
+const ImageComponent = ({ value, isInline }) => {
   const { width, height } = getImageDimensions(value)
 
   const imageUrl = urlBuilder()
@@ -16,14 +16,21 @@ const SampleImageComponent = ({ value, isInline }) => {
     .auto('format')
     .url()
 
+  const imageClassName = value.className || ''
+
   return (
     <div>
-      <Image
-        src={imageUrl}
-        alt={value.alt || ''}
-        width={width}
-        height={height}
-      />
+      <div className={imageClassName}>
+        <Image
+          src={urlFor(value)
+            .width(isInline ? 100 : 800)
+            .fit('max')
+            .url()}
+          alt={value.alt || ''}
+          width={width}
+          height={height}
+        />
+      </div>
     </div>
   )
 }
@@ -88,7 +95,7 @@ export function CustomPortableText({
       },
     },
     types: {
-      image: SampleImageComponent,
+      image: ImageComponent,
     },
   }
 

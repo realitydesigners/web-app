@@ -9,13 +9,6 @@ import { urlFor } from '../../lib/urlFor'
 const ImageComponent = ({ value, isInline }) => {
   const { width, height } = getImageDimensions(value)
 
-  const imageUrl = urlBuilder()
-    .image(value)
-    .width(isInline ? 100 : 800)
-    .fit('max')
-    .auto('format')
-    .url()
-
   const imageClassName = value.className || ''
 
   return (

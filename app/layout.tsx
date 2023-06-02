@@ -2,7 +2,6 @@ import 'tailwindcss/tailwind.css'
 import './globals.css'
 
 import { DM_Mono, Do_Hyeon, IBM_Plex_Mono, Inter } from '@next/font/google'
-import Navbar from 'components/global/Navbar'
 
 const sans = Inter({
   variable: '--font-sans',
@@ -42,10 +41,7 @@ export default async function RootLayout({
       lang="en"
       className={`${mono.variable} ${sans.variable} ${hyeon.variable} ${dm.variable}`}
     >
-      <body className="bg-black">
-        <Navbar />
-        {children}
-      </body>
+      <body className="bg-black">{children}</body>
     </html>
   )
 }

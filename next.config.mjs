@@ -6,6 +6,7 @@ const config = {
   experimental: {
     appDir: true,
     serverActions: true,
+    urlImports: ['https://themer.sanity.build/'],
   },
 
   images: {

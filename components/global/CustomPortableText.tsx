@@ -1,8 +1,32 @@
 import { PortableText, PortableTextComponents } from '@portabletext/react'
+import { getImageDimensions } from '@sanity/asset-utils'
+import urlBuilder from '@sanity/image-url'
 import Image from 'next/image'
 import { PortableTextBlock } from 'sanity'
 
 import { urlFor } from '../../lib/urlFor'
+
+const SampleImageComponent = ({ value, isInline }) => {
+  const { width, height } = getImageDimensions(value)
+
+  const imageUrl = urlBuilder()
+    .image(value)
+    .width(isInline ? 100 : 800)
+    .fit('max')
+    .auto('format')
+    .url()
+
+  return (
+    <div>
+      <Image
+        src={imageUrl}
+        alt={value.alt || ''}
+        width={width}
+        height={height}
+      />
+    </div>
+  )
+}
 
 export function CustomPortableText({
   paragraphClasses,
@@ -64,33 +88,7 @@ export function CustomPortableText({
       },
     },
     types: {
-      image: ({ value }) => {
-        if (
-          !value ||
-          !value.asset ||
-          !value.asset.metadata ||
-          !value.asset.metadata.dimensions
-        ) {
-          return null // Return null if image or metadata is missing
-        }
-
-        const { alt, caption, asset } = value
-        const imageUrl = urlFor(asset).url() || ''
-
-        return (
-          <div className="my-4">
-            <Image
-              src={imageUrl}
-              alt={alt || ''}
-              width={asset.metadata.dimensions.width}
-              height={asset.metadata.dimensions.height}
-            />
-            {caption && (
-              <div className="font-sans text-sm text-gray-600">{caption}</div>
-            )}
-          </div>
-        )
-      },
+      image: SampleImageComponent,
     },
   }
 

@@ -1,5 +1,8 @@
 import { PortableText, PortableTextComponents } from '@portabletext/react'
-import { Image, PortableTextBlock } from 'sanity'
+import Image from 'next/image'
+import { PortableTextBlock } from 'sanity'
+
+import { urlFor } from '../../lib/urlFor'
 
 export function CustomPortableText({
   paragraphClasses,
@@ -61,17 +64,29 @@ export function CustomPortableText({
       },
     },
     types: {
-      image: ({
-        value,
-      }: {
-        value: Image & { alt?: string; caption?: string }
-      }) => {
+      image: ({ value }) => {
+        if (
+          !value ||
+          !value.asset ||
+          !value.asset.metadata ||
+          !value.asset.metadata.dimensions
+        ) {
+          return null // Return null if image or metadata is missing
+        }
+
+        const { alt, caption, asset } = value
+        const imageUrl = urlFor(asset).url() || ''
+
         return (
           <div className="my-4">
-            {value?.caption && (
-              <div className="font-sans text-sm text-gray-600">
-                {value.caption}
-              </div>
+            <Image
+              src={imageUrl}
+              alt={alt || ''}
+              width={asset.metadata.dimensions.width}
+              height={asset.metadata.dimensions.height}
+            />
+            {caption && (
+              <div className="font-sans text-sm text-gray-600">{caption}</div>
             )}
           </div>
         )

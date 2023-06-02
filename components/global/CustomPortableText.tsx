@@ -28,6 +28,16 @@ const ImageComponent = ({ value, isInline }) => {
   )
 }
 
+const IframeComponent = ({ value }) => {
+  const { url, width, height } = value
+
+  return (
+    <div className="iframe-container">
+      <iframe src={url} width={width} height={height} allowFullScreen></iframe>
+    </div>
+  )
+}
+
 export function CustomPortableText({
   paragraphClasses,
   value,
@@ -87,8 +97,10 @@ export function CustomPortableText({
         )
       },
     },
+
     types: {
       image: ImageComponent,
+      iframe: IframeComponent,
     },
   }
 

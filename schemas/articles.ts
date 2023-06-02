@@ -1,4 +1,4 @@
-import { BookIcon, ImageIcon } from '@sanity/icons'
+import { BookIcon, ImageIcon, LinkIcon } from '@sanity/icons'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
 import authorType from './author'
@@ -194,6 +194,30 @@ export default defineType({
                 ],
               },
             },
+          ],
+        }),
+        defineField({
+          type: 'object',
+          icon: LinkIcon,
+          name: 'iframe',
+          title: 'IFrame',
+          fields: [
+            defineField({
+              type: 'url',
+              name: 'url',
+              title: 'URL',
+              validation: (rule) => rule.uri({ scheme: ['http', 'https'] }),
+            }),
+            defineField({
+              type: 'string',
+              name: 'width',
+              title: 'Width',
+            }),
+            defineField({
+              type: 'string',
+              name: 'height',
+              title: 'Height',
+            }),
           ],
         }),
       ],

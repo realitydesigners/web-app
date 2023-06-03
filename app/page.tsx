@@ -1,6 +1,7 @@
 'use client'
 
 import { Analytics } from '@vercel/analytics/react'
+import Navbar from 'components/global/Navbar'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { notFound } from 'next/navigation'
@@ -23,6 +24,7 @@ export default function IndexRoute() {
         <meta name="description" content="My website description"></meta>
         <link rel="icon" href="/favicon/favicon.png" />
       </Head>
+      <Navbar />
 
       <main className="bg-black">
         <div className="fixed z-0 h-screen w-screen">

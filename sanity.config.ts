@@ -12,7 +12,6 @@ import author from 'schemas/author'
 import category from 'schemas/category'
 import home from 'schemas/home'
 import page from 'schemas/page'
-import project from 'schemas/project'
 import settings from 'schemas/settings'
 
 const title =
@@ -21,7 +20,7 @@ const title =
 export const PREVIEWABLE_DOCUMENT_TYPES: string[] = [
   home.name,
   page.name,
-  project.name,
+
   articles.name,
 ]
 
@@ -32,7 +31,7 @@ export default defineConfig({
   dataset: dataset || '',
   title,
   schema: {
-    types: [home, settings, page, project, articles, author, category],
+    types: [home, settings, page, articles, author, category],
   },
   plugins: [
     deskTool({

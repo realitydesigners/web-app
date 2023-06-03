@@ -29,6 +29,7 @@
     "@splinetool/r3f-spline": "^1.0.2",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.269",
+    "@splinetool/viewer": "^0.9.356",
     "@tailwindcss/typography": "^0.5.8",
     "@types/three": "^0.150.1",
     "@vercel/analytics": "^1.0.0",

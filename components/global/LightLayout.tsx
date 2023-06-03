@@ -1,5 +1,5 @@
 // LightLayout.tsx
-import { CustomPortableText } from 'components/global/CustomPortableText'
+import { ArticlePortableText } from 'components/global/CustomPortableText'
 import { Header } from 'components/global/Header'
 import Tags from 'components/global/Tags'
 import dynamic from 'next/dynamic'
@@ -22,7 +22,7 @@ export function LightLayout({ data }: { data: ArticlesPayload }) {
           </p>
           <Tags tags={tags} />
         </div>
-        <CustomPortableText
+        <ArticlePortableText
           paragraphClasses="font-mono text-xl text-black lg:text-2xl"
           value={description}
         />

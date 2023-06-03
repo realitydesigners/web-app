@@ -1,4 +1,3 @@
-import { CustomPortableText } from 'components/global/CustomPortableText'
 import { Header } from 'components/global/Header'
 import Tags from 'components/global/Tags'
 import dynamic from 'next/dynamic'

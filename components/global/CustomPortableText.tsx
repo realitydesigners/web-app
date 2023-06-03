@@ -28,7 +28,7 @@ const ImageComponent = ({ value, isInline }) => {
   )
 }
 
-const IframeComponent = ({ value }) => {
+const iFrame = ({ value }) => {
   const { url, width, height } = value
 
   return (
@@ -37,8 +37,38 @@ const IframeComponent = ({ value }) => {
     </div>
   )
 }
+const SplineViewer = ({ value }) => {
+  const { url } = value
 
-export function CustomPortableText({
+  return (
+    <div
+      className="h-screen w-full"
+      dangerouslySetInnerHTML={{
+        __html: `
+    <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
+    <spline-viewer url="${url}"></spline-viewer>
+  `,
+      }}
+    ></div>
+  )
+}
+
+//const SplineViewerComponent = ({ value }) => {
+//const { url } = value
+
+//const htmlContent = `<spline-viewer url="${url}" ></spline-viewer>`
+
+//return (
+//  <div
+//    className="h-screen w-full"
+//     dangerouslySetInnerHTML={{ __html: htmlContent }}
+//   ></div>
+// )
+//}
+
+import React from 'react'
+
+export function ArticlePortableText({
   paragraphClasses,
   value,
 }: {
@@ -100,7 +130,8 @@ export function CustomPortableText({
 
     types: {
       image: ImageComponent,
-      iframe: IframeComponent,
+      iframe: iFrame,
+      spline: SplineViewer,
     },
   }
 

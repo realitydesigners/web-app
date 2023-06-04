@@ -1,14 +1,6 @@
 import 'tailwindcss/tailwind.css'
 import '../../globals.css'
 
-import Navbar from 'components/global/Navbar'
-import dynamic from 'next/dynamic'
-
-const Stars = dynamic<{}>(
-  () => import('../../../components/global/Stars').then((mod) => mod.default),
-  { ssr: false }
-)
-
 import {
   DM_Mono,
   Do_Hyeon,
@@ -16,6 +8,8 @@ import {
   Inter,
   PT_Serif,
 } from '@next/font/google'
+import Navbar from 'components/global/Navbar'
+import dynamic from 'next/dynamic'
 
 const serif = PT_Serif({
   variable: '--font-serif',
@@ -59,7 +53,6 @@ export default async function RootLayout({
     >
       <body>
         {' '}
-        <Stars />
         <Navbar />
         {children}
       </body>

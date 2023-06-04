@@ -3,6 +3,7 @@ import { getImageDimensions } from '@sanity/asset-utils'
 import urlBuilder from '@sanity/image-url'
 import Image from 'next/image'
 import { PortableTextBlock } from 'sanity'
+import React from 'react'
 
 import { urlFor } from '../../lib/urlFor'
 
@@ -52,21 +53,6 @@ const SplineViewer = ({ value }) => {
     ></div>
   )
 }
-
-//const SplineViewerComponent = ({ value }) => {
-//const { url } = value
-
-//const htmlContent = `<spline-viewer url="${url}" ></spline-viewer>`
-
-//return (
-//  <div
-//    className="h-screen w-full"
-//     dangerouslySetInnerHTML={{ __html: htmlContent }}
-//   ></div>
-// )
-//}
-
-import React from 'react'
 
 export function ArticlePortableText({
   paragraphClasses,

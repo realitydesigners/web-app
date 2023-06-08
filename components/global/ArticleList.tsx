@@ -11,20 +11,24 @@ interface ArticleItemProps {
 
 const ArticleItem: FC<ArticleItemProps> = ({ article }) => {
   return (
-    <div>
-      <h2 className="text-lg text-white">{article.title}</h2>
-
-      <p className="text-sm text-gray-600">{article.excerpt}</p>
-
+    <div className=" mb-8 w-full p-6">
       {article.image && (
-        <Image
-          src={urlFor(article.image).url() || ''}
-          alt={article.title || 'Article image'}
-          width={500} // replace with your desired image width
-          height={300} // replace with your desired image height
-          objectFit="cover"
-        />
+        <div className="relative mb-4 aspect-square w-full ">
+          <Image
+            src={urlFor(article.image).url() || ''}
+            alt={article.title || 'Article image'}
+            width={500}
+            height={500}
+            className="absolute inset-0 h-full w-full rounded-xl object-cover"
+          />
+        </div>
       )}
+      <h2 className="mb-4 font-hyeon text-4xl uppercase leading-none text-white">
+        {article.title}
+      </h2>
+      <p className="xtext-lg  font-hyeon leading-tight text-gray-600">
+        {article.excerpt}
+      </p>
     </div>
   )
 }

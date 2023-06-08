@@ -11,18 +11,19 @@ async function fetchArticles(): Promise<ArticlesPayload[]> {
 
   // Use the sanityClient to fetch articles
   const articles = await client.fetch(
-    `*[_type == "article"]{
-      title,
-      slug,
-      image,
-      layout,
-      category,
-      author,
-      excerpt,
-      tags,
-      scene,
-      description
-    }`
+    `*[_type == "article"] | order(date desc) {
+    title,
+    slug,
+    image,
+    layout,
+    category,
+    author,
+    excerpt,
+    tags,
+    scene,
+    description,
+    content
+  }`
   )
 
   return articles
@@ -32,7 +33,7 @@ export default async function ArticlesPage() {
   const articles = await fetchArticles()
 
   return (
-    <div className="h-screen w-full p-40">
+    <div className="h-screen w-full">
       <ArticleList articles={articles} />
     </div>
   )

@@ -19,8 +19,8 @@ const ArticleItem: FC<ArticleItemProps> = ({ article }) => {
             <Image
               src={urlFor(article.image).url() || ''}
               alt={article.title || 'Article image'}
-              width={500}
-              height={500}
+              width={2000}
+              height={2000}
               className="absolute inset-0 h-full w-full rounded-xl object-cover"
             />
           </div>

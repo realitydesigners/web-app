@@ -11,21 +11,18 @@ export function LightLayout({ data }: { data: ArticlesPayload }) {
   const { title, description = [], slug, tags = [], excerpt } = data || {}
 
   return (
-    <div className="relative z-10 min-h-screen w-screen bg-white text-black">
-      <div className="p-5 pt-40 lg:p-32">
+    <div className="relative z-10 min-h-screen w-screen bg-gray-100 text-black">
+      <div className="pt-40 ">
         <div className="flex flex-col" id="ArticleHeading">
-          <h1 className="font-dm mb-4 text-5xl font-bold uppercase tracking-wide lg:text-8xl">
+          <h1 className="mb-4 font-hyeon text-4xl font-bold uppercase leading-none lg:text-6xl">
             {title}
           </h1>
-          <p className="text-md mb-4 w-full font-mono lg:w-2/3 lg:text-xl">
+          <p className="font-hyeon text-2xl leading-tight text-black lg:text-2xl">
             {excerpt}
           </p>
           <Tags tags={tags} />
         </div>
-        <ArticlePortableText
-          paragraphClasses="font-mono text-xl text-black lg:text-2xl"
-          value={description}
-        />
+        <ArticlePortableText value={description} />
       </div>
     </div>
   )

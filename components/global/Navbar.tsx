@@ -1,20 +1,9 @@
 'use client'
 
-import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
 import logo from 'public/favicon/logo.svg'
 import React, { useEffect, useState } from 'react'
-
-const NavBarScene = dynamic<{}>(
-  () => import('components/global/NavBarScene').then((mod) => mod.default),
-  { ssr: false }
-)
-
-const Stars = dynamic<{}>(
-  () => import('components/global/Stars').then((mod) => mod.default),
-  { ssr: false }
-)
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -46,10 +35,10 @@ const Navbar: React.FC = () => {
               <Image src={logo} alt="Logo" width={50} height={50} />
             </div>
             <div className="pl-2">
-              <h1 className="font-d text-xl font-semibold uppercase leading-none text-white">
+              <h1 className="font-hyeon text-2xl font-semibold uppercase leading-none text-white">
                 Reality
               </h1>
-              <h1 className="font-d text-md font-semibold uppercase leading-none text-white">
+              <h1 className="font-hyeon text-lg font-semibold uppercase leading-none text-white">
                 Designers
               </h1>
             </div>
@@ -59,16 +48,22 @@ const Navbar: React.FC = () => {
         {/* Desktop menu */}
         <nav className="hidden space-x-8 md:flex">
           <a
-            className="font-mono font-semibold uppercase text-slate-200"
-            href="/"
+            className="font-hyeon text-xl font-semibold uppercase text-slate-200"
+            href="/articles"
           >
-            Home
+            Articles
           </a>
-          <a className="font-mono font-semibold uppercase text-slate-200">
-            About
+          <a
+            className="font-hyeon text-xl font-semibold uppercase text-slate-200"
+            href="/media"
+          >
+            Media
           </a>
-          <a className="font-mono font-semibold uppercase text-slate-200">
-            Contact
+          <a
+            className="font-hyeon text-xl font-semibold uppercase text-slate-200"
+            href="/story"
+          >
+            Story
           </a>
         </nav>
 
@@ -82,7 +77,7 @@ const Navbar: React.FC = () => {
 
         {/* Full screen menu */}
         {isMenuOpen && (
-          <div className="b fixed inset-0 z-10  md:hidden">
+          <div className="b fixed inset-0 z-10 bg-black md:hidden">
             <header className=" fixed z-50 flex h-20 w-screen items-center justify-end px-4 py-4 ">
               <button
                 onClick={toggleMenu}
@@ -92,9 +87,7 @@ const Navbar: React.FC = () => {
               </button>
             </header>
             <nav className="relative  flex h-full flex-col items-center justify-center space-y-4">
-              <div className=" absolute h-screen w-screen">
-                <NavBarScene />
-              </div>
+              <div className=" absolute h-screen w-screen"></div>
             </nav>
           </div>
         )}

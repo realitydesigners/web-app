@@ -1,21 +1,7 @@
 import 'tailwindcss/tailwind.css'
 import './globals.css'
 
-import { DM_Mono, Do_Hyeon, IBM_Plex_Mono, Inter } from '@next/font/google'
-
-const sans = Inter({
-  variable: '--font-sans',
-  subsets: ['latin'],
-  display: 'swap',
-  // @todo: understand why extrabold (800) isn't being respected when explicitly specified in this weight array
-  // weight: ['500', '700', '800'],
-})
-const mono = IBM_Plex_Mono({
-  variable: '--font-mono',
-  subsets: ['latin'],
-  weight: ['500', '700'],
-  display: 'swap',
-})
+import { DM_Mono, Do_Hyeon } from '@next/font/google'
 
 const dm = DM_Mono({
   variable: '--font-dm',
@@ -37,10 +23,7 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={`${mono.variable} ${sans.variable} ${hyeon.variable} ${dm.variable}`}
-    >
+    <html lang="en" className={`${hyeon.variable}`}>
       <body className="bg-black">{children}</body>
     </html>
   )
